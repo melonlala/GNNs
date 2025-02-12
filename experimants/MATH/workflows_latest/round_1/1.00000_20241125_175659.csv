@@ -1,0 +1,119 @@
+question,prediction,expected_output,score,cost
+"Below is a magic square, meaning that the sum of the numbers in each row, in each column, and in each of the $2$ main diagonals are equal. What is the value of $n$?
+
+[asy]size(125);
+for(int i = 0; i<4; ++i)
+{
+
+draw((0,i)--(3,i),linewidth(1));
+}
+
+for(int j = 0; j<4; ++j)
+{
+
+draw((j,0)--(j,3),linewidth(1));
+}
+
+label(""$n-3$"",(.5,.5));
+label(""3"",(.5,1.5));
+label(""$n+1$"",(.5,2.5));
+
+label(""$n+2$"",(1.5,.5));
+label(""$2n-9$"",(1.5,1.5));
+label(""$1$"",(1.5,2.5));
+
+label(""$2$"",(2.5,.5));
+label(""$n$"",(2.5,1.5));
+label(""$n-1$"",(2.5,2.5));
+[/asy]","To solve for \( n \) in the given magic square, we first denote the entries of the square as follows:
+
+\[
+\begin{bmatrix}
+n-3 & n+2 & 2 \\
+3 & 2n-9 & n \\
+n+1 & 1 & n-1
+\end{bmatrix}
+\]
+
+In a magic square, the sum of the numbers in each row, each column, and each diagonal must be equal. We will calculate the sums of the rows and set them equal to each other.
+
+**Row 1:**
+\[
+(n-3) + (n+2) + 2 = n - 3 + n + 2 + 2 = 2n + 1
+\]
+
+**Row 2:**
+\[
+3 + (2n-9) + n = 3 + 2n - 9 + n = 3n - 6
+\]
+
+**Row 3:**
+\[
+(n+1) + 1 + (n-1) = n + 1 + 1 + n - 1 = 2n + 1
+\]
+
+Setting the sums of Row 1 and Row 2 equal:
+\[
+2n + 1 = 3n - 6
+\]
+Rearranging gives:
+\[
+1 + 6 = 3n - 2n \implies 7 = n \implies n = 7
+\]
+
+Next, we will verify that this value of \( n \) satisfies the sums of the rows, columns, and diagonals.
+
+Substituting \( n = 7 \) into the square:
+\[
+\begin{bmatrix}
+7-3 & 7+2 & 2 \\
+3 & 2(7)-9 & 7 \\
+7+1 & 1 & 7-1
+\end{bmatrix}
+=
+\begin{bmatrix}
+4 & 9 & 2 \\
+3 & 5 & 7 \\
+8 & 1 & 6
+\end{bmatrix}
+\]
+
+Now we calculate the sums:
+
+**Row Sums:**
+- Row 1: \( 4 + 9 + 2 = 15 \)
+- Row 2: \( 3 + 5 + 7 = 15 \)
+- Row 3: \( 8 + 1 + 6 = 15 \)
+
+**Column Sums:**
+- Column 1: \( 4 + 3 + 8 = 15 \)
+- Column 2: \( 9 + 5 + 1 = 15 \)
+- Column 3: \( 2 + 7 + 6 = 15 \)
+
+**Diagonal Sums:**
+- Main diagonal: \( 4 + 5 + 6 = 15 \)
+- Other diagonal: \( 2 + 5 + 8 = 15 \)
+
+Since all rows, columns, and diagonals sum to 15, the value of \( n \) is confirmed to be correct.
+
+Thus, the value of \( n \) is:
+\[
+\boxed{7}
+\]","First, we can evaluate the sum across the first row, which gives $(n+1)+1+(n-1)=2n+1$.  Evaluate the sum of the entries across the second row, $3+(2n-9)+n=3n-6$. Now, since we have a magic square, these two sums are equal.  So $2n+1=3n-6$. Isolating $n$, we obtain $n = \boxed{7}$.
+
+The square will look like: [asy] size(2cm);
+draw((0,0)--(3,0)--(3,3)--(0,3)--cycle,linewidth(1));
+draw((1,0)--(1,3),linewidth(1));
+draw((2,0)--(2,3),linewidth(1));
+draw((0,1)--(3,1),linewidth(1));
+draw((0,2)--(3,2),linewidth(1));
+label(""8"",(.5,2.5));
+label(""1"",(1.5,2.5));
+label(""6"",(2.5,2.5));
+label(""3"",(.5,1.5));
+label(""5"",(1.5,1.5));
+label(""7"",(2.5,1.5));
+label(""4"",(.5,.5));
+label(""9"",(1.5,.5));
+label(""2"",(2.5,.5));
+[/asy]",1,0.0004342499999999999

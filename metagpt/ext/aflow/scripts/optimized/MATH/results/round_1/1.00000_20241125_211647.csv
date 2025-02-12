@@ -1,0 +1,52 @@
+question,prediction,expected_output,score,cost
+Find the smallest positive integer that is greater than $1$ and relatively prime to the product of the first 20 positive integers.  Reminder: two numbers are relatively prime if their greatest common divisor is 1.,"To find the smallest positive integer greater than 1 that is relatively prime to the product of the first 20 positive integers, we first need to determine what this product is. The product of the first 20 positive integers is denoted as \( 20! \).
+
+The prime factorization of \( 20! \) includes all prime numbers less than or equal to 20. The prime numbers in this range are:
+
+\[
+2, 3, 5, 7, 11, 13, 17, 19
+\]
+
+A number is relatively prime to \( 20! \) if it does not share any prime factors with \( 20! \). Therefore, we need to find the smallest integer greater than 1 that is not divisible by any of these primes.
+
+The smallest integer greater than 1 is 2. However, since 2 is a prime factor of \( 20! \), it is not relatively prime to \( 20! \).
+
+Next, we check 3. Since 3 is also a prime factor of \( 20! \), it is not relatively prime to \( 20! \).
+
+Continuing this process, we check the next integers:
+
+- **4**: \( 4 = 2^2 \) (not relatively prime)
+- **5**: (not relatively prime)
+- **6**: \( 6 = 2 \times 3 \) (not relatively prime)
+- **7**: (not relatively prime)
+- **8**: \( 8 = 2^3 \) (not relatively prime)
+- **9**: \( 9 = 3^2 \) (not relatively prime)
+- **10**: \( 10 = 2 \times 5 \) (not relatively prime)
+- **11**: (not relatively prime)
+- **12**: \( 12 = 2^2 \times 3 \) (not relatively prime)
+- **13**: (not relatively prime)
+- **14**: \( 14 = 2 \times 7 \) (not relatively prime)
+- **15**: \( 15 = 3 \times 5 \) (not relatively prime)
+- **16**: \( 16 = 2^4 \) (not relatively prime)
+- **17**: (not relatively prime)
+- **18**: \( 18 = 2 \times 3^2 \) (not relatively prime)
+- **19**: (not relatively prime)
+
+Now we check **20**: \( 20 = 2^2 \times 5 \) (not relatively prime).
+
+Next, we check **21**: \( 21 = 3 \times 7 \) (not relatively prime).
+
+Next, we check **22**: \( 22 = 2 \times 11 \) (not relatively prime).
+
+Next, we check **23**: 
+
+- 23 is a prime number and is greater than 20.
+- It is not divisible by any of the primes \( 2, 3, 5, 7, 11, 13, 17, 19 \).
+
+Since 23 does not share any prime factors with \( 20! \), it is relatively prime to \( 20! \).
+
+Thus, the smallest positive integer greater than 1 that is relatively prime to the product of the first 20 positive integers is:
+
+\[
+\boxed{23}
+\]","Two numbers are relatively prime if they share no prime factors.  Therefore, the desired positive integer must not share any prime factors with the product of the first 20 positive integers.  So, every prime in the prime factorization of the desired positive integer is greater than 20, which means the smallest possible integer is $\boxed{23}$.",1,0.00044039999999999997

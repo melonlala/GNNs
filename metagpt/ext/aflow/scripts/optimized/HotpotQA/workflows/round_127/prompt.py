@@ -1,0 +1,47 @@
+DIRECT_ANSWER_PROMPT = """
+If possible, provide a direct answer to the following question without generating context.
+
+Question: {question}
+"""
+
+FALLBACK_PROMPT = """
+The previous responses were inconclusive. Please provide a fresh perspective or new context on the question.
+
+Question: {question} Last response context was: {context}
+"""
+
+CLARIFICATION_PROMPT = """
+The previous information was vague or ambiguous. Please clarify the following context.
+
+Context: {context}
+"""
+
+VALIDATION_PROMPT = """
+Verify the relevance and clarity of the following context.
+
+Context: {context}
+"""
+
+REVIEW_PROMPT = """
+Review the following information and summarize it.
+
+Information: {information}
+"""
+
+SUMMARY_PROMPT = """
+Generate a concise summary based on the following details.
+
+Details: {details}
+"""
+
+CONTEXT_PROMPT = """
+Provide detailed context for the following problem.
+
+Problem: {problem}
+"""
+
+SELF_ASK_PROMPT = """
+Before answering, consider the potential nuances and clarify the question based on the following input.
+
+Input: {input}
+"""

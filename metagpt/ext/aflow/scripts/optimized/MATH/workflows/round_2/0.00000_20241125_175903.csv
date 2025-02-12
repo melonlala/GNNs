@@ -1,0 +1,45 @@
+question,prediction,expected_output,score,cost
+"Below is a magic square, meaning that the sum of the numbers in each row, in each column, and in each of the $2$ main diagonals are equal. What is the value of $n$?
+
+[asy]size(125);
+for(int i = 0; i<4; ++i)
+{
+
+draw((0,i)--(3,i),linewidth(1));
+}
+
+for(int j = 0; j<4; ++j)
+{
+
+draw((j,0)--(j,3),linewidth(1));
+}
+
+label(""$n-3$"",(.5,.5));
+label(""3"",(.5,1.5));
+label(""$n+1$"",(.5,2.5));
+
+label(""$n+2$"",(1.5,.5));
+label(""$2n-9$"",(1.5,1.5));
+label(""$1$"",(1.5,2.5));
+
+label(""$2$"",(2.5,.5));
+label(""$n$"",(2.5,1.5));
+label(""$n-1$"",(2.5,2.5));
+[/asy]",__call__() got an unexpected keyword argument 'sc_ensemble',"First, we can evaluate the sum across the first row, which gives $(n+1)+1+(n-1)=2n+1$.  Evaluate the sum of the entries across the second row, $3+(2n-9)+n=3n-6$. Now, since we have a magic square, these two sums are equal.  So $2n+1=3n-6$. Isolating $n$, we obtain $n = \boxed{7}$.
+
+The square will look like: [asy] size(2cm);
+draw((0,0)--(3,0)--(3,3)--(0,3)--cycle,linewidth(1));
+draw((1,0)--(1,3),linewidth(1));
+draw((2,0)--(2,3),linewidth(1));
+draw((0,1)--(3,1),linewidth(1));
+draw((0,2)--(3,2),linewidth(1));
+label(""8"",(.5,2.5));
+label(""1"",(1.5,2.5));
+label(""6"",(2.5,2.5));
+label(""3"",(.5,1.5));
+label(""5"",(1.5,1.5));
+label(""7"",(2.5,1.5));
+label(""4"",(.5,.5));
+label(""9"",(1.5,.5));
+label(""2"",(2.5,.5));
+[/asy]",0.0,0.0

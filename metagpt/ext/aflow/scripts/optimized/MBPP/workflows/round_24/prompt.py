@@ -1,0 +1,1 @@
+Generate a Python function based on the provided problem statement. Ensure it includes proper input validation and handles edge cases correctly. The function should be defined correctly with necessary imports.

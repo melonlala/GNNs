@@ -1,0 +1,2 @@
+question,prediction,expected_output,score,cost
+Estimate $14.7923412^2$ to the nearest hundred.,__call__() got an unexpected keyword argument 'sc_ensemble',"We know $14^2=196$ and $15^2=225.$ So both $14^2$ and $15^2,$ estimated to the nearest hundred, are 200. Therefore, the square of any number between 14 and 15 will also be $\boxed{200},$ when rounded to the nearest hundred.",0.0,0.0

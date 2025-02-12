@@ -1,0 +1,16 @@
+# Full Example: https://github.com/geekan/MetaGPT/blob/main/config/config2.example.yaml
+# Reflected Code: https://github.com/geekan/MetaGPT/blob/main/metagpt/config2.py
+# Config Docs: https://docs.deepwisdom.ai/main/en/guide/get_started/configuration.html
+models:
+  "gpt-4o-mini":
+    api_type: "openai"  # or azure / ollama / groq etc.
+    # model: "gpt-4o-mini"  # or gpt-3.5-turbo
+    # base_url: "https://api.openai.com/v1"  # or forward url / other llm url
+    # base_url: "https://cld.gpt5api.cc/v1"
+    base_url: "https://api7.cc/v1"
+    api_key: "sk-opYNpM5s7jianaljjj9TbGrNXKvP5EgYe12uCAoezEGWY4RP"
+    temperature: 0
+  "deepseek-chat":
+    api_type: "openai"
+    base_url: "https://api.deepseek.com"
+    api_key: "sk-faba525b77d04281afb5ca906848041e"
